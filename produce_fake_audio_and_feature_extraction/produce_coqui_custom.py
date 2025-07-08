@@ -31,7 +31,7 @@ with open("texts.txt", "r") as f:
                 text=lines[cv_idx * 2000 + counter],
                 speaker_wav=f"{REAL_AUDIOS_PATH}/{cv}",
                 language="tr",
-                file_path=f"fake_celebrity_audios/{os.path.splitext(cv)[0]}_{counter}.wav"
+                file_path=f"{os.path.splitext(cv)[0]}_{counter}.wav"
                 )
         
 
