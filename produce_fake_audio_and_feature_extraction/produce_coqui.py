@@ -16,7 +16,7 @@ print(device)
 # Initialize TTS
 tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to(device)
 
-with open("texts_copy.txt", "r") as file:
+with open("texts.txt", "r") as file:
   for idx, line in enumerate(file):
     
     # TTS to a file, use a preset speaker
