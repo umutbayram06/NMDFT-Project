@@ -21,6 +21,7 @@ cd produce_fake_audio <br>
 python3 -m venv venv <br>
 pip install -r requirements.txt
 
+Not: Paket versiyonlarının çakışmaması için ayrı ayrı environment'lara kurulmasını tavsiye ederim.
 # Projenin Genel Dosya Yapısı
 
 ## `models` Klasörü
