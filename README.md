@@ -51,7 +51,5 @@ Bu dosya ElevenLabs TTS modellerini kullanarak sahte ses kaydı üretiminde kull
 
 `test.ipynb` ise ilgili modelin test edilmesini sağlamaktadır. Bu dosya daha önceden preprocess edilen test veri setindeki ses dosyalarına ait mel-spectrogram'ları yükleyerek bulunduğu klasördeki modeli test etmektedir.
 
-`mel_spectrogram_extraction.ipynb` Dosyası
-
-Bu dosya ses dosyalarından mel-spectrogram feature'larının çıkarılmasında kullanılmıştır. Dosya içerisinde `dataset_dir` değişkenine dataset directory verilerek içerisindeki tüm ses dosyalarından recursive olarak (subfolder içindekiler dahil) mel-spectrogram çıkarmaktadır.
+`mel_spectrogram_extraction.ipynb` dosyası ses dosyalarından mel-spectrogram feature'larının çıkarılmasında kullanılmıştır. Dosya içerisinde `dataset_dir` değişkenine dataset directory verilerek içerisindeki tüm ses dosyalarından recursive olarak (subfolder içindekiler dahil) mel-spectrogram çıkarmaktadır.
 
