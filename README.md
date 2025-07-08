@@ -21,7 +21,9 @@ cd produce_fake_audio <br>
 python3 -m venv venv <br>
 pip install -r requirements.txt
 
-Not: Paket versiyonlarının çakışmaması için ayrı ayrı environment'lara kurulmasını tavsiye ederim.
+Not1: İki klasörün requirements.txt dosyaları farklıdır. Çünkü birincisi model eğitimi ve testinde kullanılırken, ikincisi feature_extraction ve dataset'e veri üretimi için kullanılmıştır.
+
+Not2: Paket versiyonlarının çakışmaması için ayrı ayrı environment'lara kurulmasını tavsiye ederim.
 # Projenin Genel Dosya Yapısı
 
 ## `models` Klasörü
