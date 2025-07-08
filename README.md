@@ -11,6 +11,8 @@ Model testi `mel_spectrograms_test.npy` ve `labels_test.npy` dosyalari ile yapı
 
 # Kurulum (Paket Kurulumları) (Başka şekillerde de paketler kurulabilir. Requirements.txt dosyasını verdim.)
 
+Python version: 3.12.3
+
 ## models Klasörü İçin
 cd models <br>
 python3 -m venv venv <br>
