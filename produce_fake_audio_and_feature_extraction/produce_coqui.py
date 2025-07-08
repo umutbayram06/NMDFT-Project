@@ -24,5 +24,5 @@ with open("texts.txt", "r") as file:
       text=line,
       speaker="Asya Anara",
       language="tr",
-      file_path=f"audios_coqui/asya_{idx}.wav"
+      file_path=f"asya_{idx}.wav"
     )
