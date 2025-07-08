@@ -17,7 +17,7 @@ python3 -m venv venv <br>
 pip install -r requirements.txt
 
 ## producing_fake_audio Klasörü İçin
-cd producing_fake_audio <br>
+cd produce_fake_audio <br>
 python3 -m venv venv <br>
 pip install -r requirements.txt
 
@@ -29,9 +29,9 @@ Bu klasörün içerisinde modelin değişik versiyonlarının bulunduğu klasör
 
 ## `produce_fake_audio` Klasörü
 
-### `preprocess.py` Dosyası
+### `mel_spectrogram_extraction.ipynb` Dosyası
 
-Bu dosya ses dosyalarından mel-spectrogram feature'larının çıkarılmasında kullanılmıştır.
+Bu dosya ses dosyalarından mel-spectrogram feature'larının çıkarılmasında kullanılmıştır. Dosya içerisinde `dataset_dir` değişkenine dataset directory verilerek içerisindeki tüm ses dosyalarından recursive olarak (subfolder içindekiler dahil) mel-spectrogram çıkarmaktadır.
 
 ### `produce_coqui.py` Dosyası
 
@@ -45,12 +45,13 @@ Bu dosya `coqui-ai/tts` modelini kullanarak gerçek ses kayıtlarına ait sesler
 
 Bu dosya ElevenLabs TTS modellerini kullanarak sahte ses kaydı üretiminde kullanılmıştır.
 
-
 # Jupyter Dosyalarının Açıklanması
 
 `models` klasörü altında her bir modelin klasörü altında bulunan Jupyter dosyalarından `train.ipynb` modelin eğitiminin yapılmasını sağlayan dosyadır. Bu dosyada modele ait hyperparameter'ler bulunmaktadır ve model eğitimin ardından kaydedilmektedir.
 
 `test.ipynb` ise ilgili modelin test edilmesini sağlamaktadır. Bu dosya daha önceden preprocess edilen test veri setindeki ses dosyalarına ait mel-spectrogram'ları yükleyerek bulunduğu klasördeki modeli test etmektedir.
 
+`mel_spectrogram_extraction.ipynb` Dosyası
 
+Bu dosya ses dosyalarından mel-spectrogram feature'larının çıkarılmasında kullanılmıştır. Dosya içerisinde `dataset_dir` değişkenine dataset directory verilerek içerisindeki tüm ses dosyalarından recursive olarak (subfolder içindekiler dahil) mel-spectrogram çıkarmaktadır.
 
