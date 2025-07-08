@@ -7,7 +7,7 @@ https://chatgpt.com/share/686a7800-9030-8005-aa52-17f7fc0a827a
 
 import requests
 
-API_KEY = 'sk_dfa240010aa268c9a1b0f482e3862245db2c9bdb62b66a5b'
+API_KEY = "API-KEY"
 VOICE_ID = 'IuRRIAcbQK5AQk1XevPj'
 
 url = f'https://api.elevenlabs.io/v1/text-to-speech/{VOICE_ID}'
