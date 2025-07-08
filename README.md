@@ -3,10 +3,11 @@ Github'a her ne kadar yüklemeye uğraşsam da (LFS dahil denendi, veri setini k
 
 Drive Linki: https://drive.google.com/drive/folders/1KlUOu0GsrpCs5HxJHMLBmifcQCE-6LlV?usp=sharing
 
-Model eğitimi `mel_spectrograms_train.npy` ve `labels_train.npy` dosyaları ile yapılmaktadır.
-Model testi `mel_spectrograms_test.npy` ve `labels_test.npy` dosyalari ile yapılmaktadır.
+Model eğitimi `mel_spectrograms_train.npy` ve `labels_train.npy` dosyaları ile yapılmaktadır. Bu dosyaları repository'yi klonladıktan sonra repo'yu klonladığımız klasörün içine attığımızda `models` klasörü altından `train.ipynb` dosyalarını kullanarak her bir modeli eğitebiliyoruz.
 
 Ayrıca Drive üzerinde `test_dataset` klasörü altında `mel_spectrograms_test.npy` ve `labels_test.npy` dosyalarının üretilmesinde kullanılan test ses dosyaları bulunmaktadır.
+
+Model testi `mel_spectrograms_test.npy` ve `labels_test.npy` dosyalari ile yapılmaktadır. Bu dosyaları repository'yi klonladıktan sonra repo'yu klonladığımız klasörün içine attığımızda `models` klasörü altından `test.ipynb` dosyalarını kullanarak her bir modeli test edebiliyoruz. Bu dosyalar Drive üzerinde verilen `test_dataset.zip` dosyasının içerisindeki ses kayıtlarının `produce_fake_audio/mel_spectrogram_extraction.ipynb` dosyası kullanılarak mel-spectrogram'larına ayrılmasıyla elde edilmiştir. İstenirse bu tekrarlanabilir. Ardından oluşan .npy uzantılı test dosyaları `models` klasörü altındaki `test.ipynb` dosyalarına load edilerek kullanılabilir.
 
 # Kurulum (Paket Kurulumları) (Başka şekillerde de paketler kurulabilir. Requirements.txt dosyasını verdim.)
 
@@ -26,7 +27,7 @@ pip install -r requirements.txt
 
 Bu klasörün içerisinde modelin değişik versiyonlarının bulunduğu klasördür. Her bir model için klasör içerisinde `train.ipynb` ve `test.ipynb` dosyaları bulunmaktadır. Bu dosyalar ile model eğitilmiş ve test edilmiştir. Ayrıca çıktılar da bu dosyalara kaydedilmiştir.
 
-## `producing_fake_audio` Klasörü
+## `produce_fake_audio` Klasörü
 
 ### `preprocess.py` Dosyası
 
