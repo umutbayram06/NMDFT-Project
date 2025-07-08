@@ -1,1 +1,55 @@
-# NMDFT-Project
+# Veri Seti (Drive)
+Github'a her ne kadar yüklemeye uğraşsam da (LFS dahil denendi, veri setini küçültüp denedim bu sefer de aylık kota gibi şeylere takıldım.) başarılı olamadım, o yüzden Drive'a yükledim.
+
+Drive Linki: https://drive.google.com/drive/folders/1KlUOu0GsrpCs5HxJHMLBmifcQCE-6LlV?usp=sharing
+
+Model eğitimi `mel_spectrograms_train.npy` ve `labels_train.npy` dosyaları ile yapılmaktadır.
+Model testi `mel_spectrograms_test.npy` ve `labels_test.npy` dosyalari ile yapılmaktadır.
+
+Ayrıca Drive üzerinde `test_dataset` klasörü altında `mel_spectrograms_test.npy` ve `labels_test.npy` dosyalarının üretilmesinde kullanılan test ses dosyaları bulunmaktadır.
+
+# Kurulum (Paket Kurulumları) (Başka şekillerde de paketler kurulabilir. Requirements.txt dosyasını verdim.)
+
+## models Klasörü İçin
+cd models <br>
+python3 -m venv venv <br>
+pip install -r requirements.txt
+
+## producing_fake_audio Klasörü İçin
+cd producing_fake_audio <br>
+python3 -m venv venv <br>
+pip install -r requirements.txt
+
+# Projenin Genel Dosya Yapısı
+
+## `models` Klasörü
+
+Bu klasörün içerisinde modelin değişik versiyonlarının bulunduğu klasördür. Her bir model için klasör içerisinde `train.ipynb` ve `test.ipynb` dosyaları bulunmaktadır. Bu dosyalar ile model eğitilmiş ve test edilmiştir. Ayrıca çıktılar da bu dosyalara kaydedilmiştir.
+
+## `producing_fake_audio` Klasörü
+
+### `preprocess.py` Dosyası
+
+Bu dosya ses dosyalarından mel-spectrogram feature'larının çıkarılmasında kullanılmıştır.
+
+### `produce_coqui.py` Dosyası
+
+Bu dosya `coqui-ai/tts` modelini kullanarak sahte ses kayıtlarının üretilmesinde kullanılmıştır. Modelin kendi bünyesinde bulunan sesler kullanılmıştır.
+
+### `produce_coqui_custom.py` Dosyası
+
+Bu dosya `coqui-ai/tts` modelini kullanarak gerçek ses kayıtlarına ait seslerin kullanılmasıyla sahte seslerin üretiminde kullanılmıştır. (Voice cloning)
+
+### `produce_elevenlabs.py` Dosyası
+
+Bu dosya ElevenLabs TTS modellerini kullanarak sahte ses kaydı üretiminde kullanılmıştır.
+
+
+# Jupyter Dosyalarının Açıklanması
+
+`models` klasörü altında her bir modelin klasörü altında bulunan Jupyter dosyalarından `train.ipynb` modelin eğitiminin yapılmasını sağlayan dosyadır. Bu dosyada modele ait hyperparameter'ler bulunmaktadır ve model eğitimin ardından kaydedilmektedir.
+
+`test.ipynb` ise ilgili modelin test edilmesini sağlamaktadır. Bu dosya daha önceden preprocess edilen test veri setindeki ses dosyalarına ait mel-spectrogram'ları yükleyerek bulunduğu klasördeki modeli test etmektedir.
+
+
+
